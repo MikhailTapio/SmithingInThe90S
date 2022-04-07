@@ -2,7 +2,7 @@
   {
     "modid": "smithing",
     "name": "Smithing In The \"90'S\"",
-    "description": "Bring netherite stuffs and the smithing table back to legacy minecraft.",
+    "description": "Bring netherite stuff and the smithing table back to legacy minecraft.",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
