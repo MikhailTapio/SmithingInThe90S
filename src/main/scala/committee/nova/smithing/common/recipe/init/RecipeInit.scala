@@ -16,7 +16,7 @@ object RecipeInit {
   }
 
   private def registerCrafting(): Unit = {
-    GameRegistry.addShapelessRecipe(new ItemStack((n_ingot), 9), new ItemStack(BlockInit.blockList(BlockInit.names(1))))
+    GameRegistry.addShapelessRecipe(new ItemStack(n_ingot, 9), new ItemStack(BlockInit.blockList(BlockInit.names(1))))
     GameRegistry.addShapelessRecipe(new ItemStack(BlockInit.blockList(BlockInit.names(1))), n_ingot, n_ingot, n_ingot, n_ingot, n_ingot, n_ingot, n_ingot, n_ingot, n_ingot)
     GameRegistry.addShapedRecipe(new ItemStack(ItemInit.itemList(ItemInit.names(0))),
       " # ", " S ", " S ", jC('#'), n_ingot, jC('S'), Items.stick)

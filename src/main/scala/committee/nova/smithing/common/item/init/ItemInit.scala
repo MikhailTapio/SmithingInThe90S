@@ -22,13 +22,13 @@ object ItemInit {
     names(7) -> itemWithProperties(new ItemNetheriteArmor(3), names(7), isTool = false),
     names(8) -> itemWithProperties(new ItemSword(NETHERITE_TOOL), names(8), isTool = false),
     names(9) -> new Item {
-      setUnlocalizedName(prefixName(names(9)));
-      setTextureName(Smithing.MODID + ":" + names(9));
+      setUnlocalizedName(prefixName(names(9)))
+      setTextureName(Smithing.MODID + ":" + names(9))
       setCreativeTab(tabMaterials)
     },
     names(10) -> new Item {
-      setUnlocalizedName(prefixName(names(10)));
-      setTextureName(Smithing.MODID + ":" + names(10));
+      setUnlocalizedName(prefixName(names(10)))
+      setTextureName(Smithing.MODID + ":" + names(10))
       setCreativeTab(tabMaterials)
     }
   )

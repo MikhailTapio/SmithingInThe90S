@@ -6,7 +6,6 @@ import committee.nova.smithing.common.util.Utilities._
 import cpw.mods.fml.relauncher.{Side, SideOnly}
 import net.minecraft.client.gui.inventory.GuiContainer
 import net.minecraft.client.resources.I18n
-import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.util.ResourceLocation
 import org.lwjgl.opengl.GL11
 
@@ -15,7 +14,7 @@ object GuiContainerSmithingTable {
 }
 
 @SideOnly(Side.CLIENT)
-class GuiContainerSmithingTable(container: ContainerSmithingTable, player: EntityPlayer) extends GuiContainer(container) {
+class GuiContainerSmithingTable(container: ContainerSmithingTable) extends GuiContainer(container) {
   inventorySlots = container
   xSize = 176
   ySize = 166

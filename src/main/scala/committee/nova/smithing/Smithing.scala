@@ -17,8 +17,10 @@ object Smithing {
 @Mod(modid = Smithing.MODID, useMetadata = true)
 class Smithing {
   Smithing.instance = this
+
   @EventHandler
   def preInit(event: FMLPreInitializationEvent): Unit = proxy.preInit(event)
+
   @EventHandler
   def init(event: FMLInitializationEvent): Unit = proxy.init(event)
 }

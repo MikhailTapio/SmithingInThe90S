@@ -59,7 +59,7 @@ class ContainerSmithingTable(inv: InventoryPlayer, world: World) extends Contain
     oldStack
   }
 
-  def tryUpper(newStack: ItemStack): Boolean = !applicant.getHasStack && mergeItemStack(newStack, 0, 1, false) || !ingot.getHasStack && newStack.getItem == itemList(names(9)) && mergeItemStack(newStack, 1, 2, false)
+  def tryUpper(newStack: ItemStack): Boolean = !ingot.getHasStack && newStack.getItem == itemList(names(9)) && mergeItemStack(newStack, 1, 2, false) || !applicant.getHasStack && mergeItemStack(newStack, 0, 1, false)
 
   override def onCraftMatrixChanged(inv: IInventory): Unit = {
     super.onCraftMatrixChanged(inv)

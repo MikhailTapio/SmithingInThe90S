@@ -26,7 +26,7 @@ class GuiInit extends IGuiHandler {
 
   override def getClientGuiElement(ID: Int, player: EntityPlayer, world: World, x: Int, y: Int, z: Int): AnyRef = {
     ID match {
-      case GuiInit.smithingTable => new GuiContainerSmithingTable(new ContainerSmithingTable(player.inventory, world), player)
+      case GuiInit.smithingTable => new GuiContainerSmithingTable(new ContainerSmithingTable(player.inventory, world))
       case _ => null
     }
   }
