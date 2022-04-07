@@ -39,7 +39,6 @@ class ContainerSmithingTable(inv: InventoryPlayer, world: World) extends Contain
     }
   }
 
-
   override def transferStackInSlot(player: EntityPlayer, index: Int): ItemStack = {
     val s = inventorySlots.get(index)
     if (!s.isInstanceOf[Slot]) return null
@@ -96,6 +95,5 @@ class ContainerSmithingTable(inv: InventoryPlayer, world: World) extends Contain
     resultSlot.setInventorySlotContents(0, result)
   }
 
-  //def unable(): Boolean = (inputSlots.getStackInSlot(0) != null || inputSlots.getStackInSlot(1) != null) && resultSlot.getStackInSlot(0) == null
   def unable(): Boolean = (applicant.getHasStack || ingot.getHasStack) && !result.getHasStack
 }

@@ -10,9 +10,7 @@ import net.minecraft.world.World
 object GuiInit {
   final val smithingTable = 1
 
-  def init(): Unit = {
-    new GuiInit
-  }
+  def init(): Unit = new GuiInit
 }
 
 class GuiInit extends IGuiHandler {

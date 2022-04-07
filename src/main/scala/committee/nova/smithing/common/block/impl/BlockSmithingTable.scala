@@ -33,11 +33,5 @@ class BlockSmithingTable extends Block(Material.wood) {
     true
   }
 
-
   override def registerBlockIcons(reg: IIconRegister): Unit = for (i <- 0 until 4) icons(i) = reg.registerIcon(prefixResourceLocation(names(2) + "_" + String.valueOf(i)))
-
-  /*
-  override def createNewTileEntity(p_149915_1_ : World, p_149915_2_ : Int): TileEntity = {
-    new TileEntitySmithingTable
-  }*/
 }

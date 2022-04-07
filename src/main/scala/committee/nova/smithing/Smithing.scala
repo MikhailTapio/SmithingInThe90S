@@ -8,7 +8,7 @@ import cpw.mods.fml.common.{Mod, SidedProxy}
 
 object Smithing {
   final val MODID = "smithing"
-  @SidedProxy(serverSide = "committee.nova.smithing.common.proxy.CommonProxy", clientSide = "committee.nova.smithing.client.proxy.ClientProxy")
+  @SidedProxy(serverSide = "committee.nova.smithing.common.proxy.CommonProxy")
   val proxy: CommonProxy = new CommonProxy
   @Mod.Instance(Smithing.MODID)
   var instance: Smithing = _
@@ -17,10 +17,8 @@ object Smithing {
 @Mod(modid = Smithing.MODID, useMetadata = true)
 class Smithing {
   Smithing.instance = this
-
   @EventHandler
   def preInit(event: FMLPreInitializationEvent): Unit = proxy.preInit(event)
-
   @EventHandler
   def init(event: FMLInitializationEvent): Unit = proxy.init(event)
 }
