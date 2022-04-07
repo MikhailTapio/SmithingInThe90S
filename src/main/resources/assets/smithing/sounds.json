@@ -1,0 +1,51 @@
+{
+  "dig.netheriteBlock": {
+    "category": "block",
+    "sounds": [
+      "block/netherite/break1",
+      "block/netherite/break2",
+      "block/netherite/break3",
+      "block/netherite/break4"
+    ]
+  },
+  "step.netheriteBlock": {
+    "category": "block",
+    "sounds": [
+      "block/netherite/step1",
+      "block/netherite/step2",
+      "block/netherite/step3",
+      "block/netherite/step4",
+      "block/netherite/step5",
+      "block/netherite/step6"
+    ]
+  },
+  "dig.ancientDebris": {
+    "category": "block",
+    "sounds": [
+      "block/ancient_debris/break1",
+      "block/ancient_debris/break2",
+      "block/ancient_debris/break3",
+      "block/ancient_debris/break4",
+      "block/ancient_debris/break5"
+    ]
+  },
+  "step.ancientDebris": {
+    "category": "block",
+    "sounds": [
+      "block/ancient_debris/step1",
+      "block/ancient_debris/step2",
+      "block/ancient_debris/step3",
+      "block/ancient_debris/step4",
+      "block/ancient_debris/step5",
+      "block/ancient_debris/step6"
+    ]
+  },
+  "use.smithingTable": {
+    "category": "block",
+    "sounds": [
+      "block/smithing_table/use1",
+      "block/smithing_table/use2",
+      "block/smithing_table/use3"
+    ]
+  }
+}
