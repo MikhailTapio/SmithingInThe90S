@@ -40,8 +40,8 @@ object RecipeInit {
       "# #", "# #", jC('#'), n_ingot)
     GameRegistry.addShapedRecipe(new ItemStack(ItemInit.itemList(ItemInit.names(8))),
       " # ", " # ", " S ", jC('#'), n_ingot, jC('S'), Items.stick)
-    GameRegistry.addShapedRecipe(new ItemStack(ItemInit.itemList(ItemInit.names(9))),
-      "###", "#GG", "GG ", jC('#'), n_ingot, jC('G'), Items.gold_ingot)
+    GameRegistry.addShapedRecipe(new ItemStack(n_ingot),
+      "###", "#GG", "GG ", jC('#'), ItemInit.itemList(ItemInit.names(10)), jC('G'), Items.gold_ingot)
     GameRegistry.addRecipe(new ShapedOreRecipe(BlockInit.blockList(BlockInit.names(2)),
       "II ", "WW ", "WW ", jC('I'), Items.iron_ingot, jC('W'), "plankWood"))
   }
