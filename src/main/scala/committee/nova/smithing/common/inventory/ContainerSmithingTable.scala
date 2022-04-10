@@ -1,9 +1,8 @@
 package committee.nova.smithing.common.inventory
 
 import committee.nova.smithing.common.inventory.slot.{SlotLimited, SlotResult}
-import committee.nova.smithing.common.item.init.ItemInit
-import committee.nova.smithing.common.item.init.ItemInit._
 import committee.nova.smithing.common.recipe.SmithingPreference
+import committee.nova.smithing.common.util.Utilities
 import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.entity.player.{EntityPlayer, InventoryPlayer}
 import net.minecraft.inventory._
@@ -19,7 +18,7 @@ class ContainerSmithingTable(inv: InventoryPlayer, world: World) extends Contain
   }
   val resultSlot = new InventoryCraftResult
   val applicant = new Slot(inputSlots, 0, 27, 47)
-  val ingot = new SlotLimited(inputSlots, 1, 76, 47, itemList(names(9)))
+  val ingot = new SlotLimited(inputSlots, 1, 76, 47, item => Utilities.isNetheriteIngot(item))
   val result = new SlotResult(this, resultSlot, 2, 134, 47)
   addSlotToContainer(applicant)
   addSlotToContainer(ingot)
@@ -59,7 +58,7 @@ class ContainerSmithingTable(inv: InventoryPlayer, world: World) extends Contain
     oldStack
   }
 
-  def tryUpper(newStack: ItemStack): Boolean = !ingot.getHasStack && newStack.getItem == itemList(names(9)) && mergeItemStack(newStack, 1, 2, false) || !applicant.getHasStack && mergeItemStack(newStack, 0, 1, false)
+  def tryUpper(newStack: ItemStack): Boolean = !ingot.getHasStack && Utilities.isNetheriteIngot(newStack.getItem) && mergeItemStack(newStack, 1, 2, false) || !applicant.getHasStack && mergeItemStack(newStack, 0, 1, false)
 
   override def onCraftMatrixChanged(inv: IInventory): Unit = {
     super.onCraftMatrixChanged(inv)
@@ -84,7 +83,7 @@ class ContainerSmithingTable(inv: InventoryPlayer, world: World) extends Contain
       resultSlot.setInventorySlotContents(0, null)
       return
     }
-    if (b.getItem != ItemInit.itemList(ItemInit.names(9))) {
+    if (!Utilities.isNetheriteIngot(b.getItem)) {
       resultSlot.setInventorySlotContents(0, null)
       return
     }

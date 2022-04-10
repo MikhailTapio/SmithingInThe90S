@@ -9,9 +9,7 @@ import cpw.mods.fml.common.event.{FMLInitializationEvent, FMLPreInitializationEv
 import net.minecraftforge.common.MinecraftForge
 
 class CommonProxy {
-  def preInit(event: FMLPreInitializationEvent): Unit = {
-    RegistryHandler.register()
-  }
+  def preInit(event: FMLPreInitializationEvent): Unit = RegistryHandler.register(event)
 
   def init(event: FMLInitializationEvent): Unit = {
     RecipeInit.init()

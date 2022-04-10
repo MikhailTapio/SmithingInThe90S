@@ -8,6 +8,7 @@ import cpw.mods.fml.common.registry.GameRegistry
 import net.minecraft.block.Block
 import net.minecraft.block.material.{MapColor, Material}
 import net.minecraft.creativetab.CreativeTabs
+import net.minecraft.world.IBlockAccess
 
 object BlockInit {
   val names: Array[String] = Array("ancient_debris", prefixId("block"), "smithing_table")
@@ -18,8 +19,9 @@ object BlockInit {
     names(0) -> new BlockAncientDebris,
     names(1) -> new BlockMaterial(netherite) {
       setHarvestLevel("pickaxe", 3)
-    }
-      .setHardness(30F).setResistance(1200F).setStepSound(netheriteBlock).setBlockName(prefixName(names(1))).
+
+      override def isBeaconBase(worldObj: IBlockAccess, x: Int, y: Int, z: Int, beaconX: Int, beaconY: Int, beaconZ: Int): Boolean = true
+    }.setHardness(30F).setResistance(1200F).setStepSound(netheriteBlock).setBlockName(prefixName(names(1))).
       setBlockTextureName(prefixResourceLocation(names(1))).setCreativeTab(CreativeTabs.tabBlock),
     names(2) -> new BlockSmithingTable
   )

@@ -4,6 +4,7 @@ import committee.nova.smithing.Smithing
 import net.minecraft.creativetab.CreativeTabs._
 import net.minecraft.entity.player.InventoryPlayer
 import net.minecraft.item.Item
+import net.minecraftforge.oredict.OreDictionary
 
 object Utilities {
   val NETHERITE = "netherite"
@@ -26,5 +27,12 @@ object Utilities {
       if (!inv.hasItem(item)) return false
     }
     true
+  }
+
+  def isNetheriteIngot(item: Item): Boolean = {
+    val ores = OreDictionary.getOres("ingotNetherite")
+    val size = ores.size()
+    for (i <- 0 until size) if (ores.get(i).getItem == item) return true
+    false
   }
 }

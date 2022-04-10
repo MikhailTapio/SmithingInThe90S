@@ -18,5 +18,4 @@ object SmithingPreference {
   )
 
   def getSmithingMap: Map[Item, Item] = smithingMap
-
 }
