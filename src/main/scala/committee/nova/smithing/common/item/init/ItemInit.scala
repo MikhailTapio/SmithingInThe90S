@@ -25,6 +25,7 @@ object ItemInit {
       setUnlocalizedName(prefixName(names(9)))
       setTextureName(Smithing.MODID + ":" + names(9))
       setCreativeTab(tabMaterials)
+      override def isBeaconPayment(stack: ItemStack): Boolean = true
     },
     names(10) -> new Item {
       setUnlocalizedName(prefixName(names(10)))
