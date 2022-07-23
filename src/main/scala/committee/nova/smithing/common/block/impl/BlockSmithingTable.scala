@@ -27,9 +27,7 @@ class BlockSmithingTable extends Block(Material.wood) {
   override def getIcon(side: Int, meta: Int): IIcon = icons(iconMap(side))
 
   override def onBlockActivated(world: World, x: Int, y: Int, z: Int, player: EntityPlayer, side: Int, subX: Float, subY: Float, subZ: Float): Boolean = {
-    if (!world.isRemote) {
-      player.openGui(Smithing.instance, GuiInit.smithingTable, world, x, y, z)
-    }
+    if (!world.isRemote) player.openGui(Smithing, GuiInit.smithingTable, world, x, y, z)
     true
   }
 

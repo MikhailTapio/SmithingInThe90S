@@ -14,7 +14,7 @@ object GuiInit {
 }
 
 class GuiInit extends IGuiHandler {
-  NetworkRegistry.INSTANCE.registerGuiHandler(Smithing.instance, this)
+  NetworkRegistry.INSTANCE.registerGuiHandler(Smithing, this)
 
   override def getServerGuiElement(ID: Int, player: EntityPlayer, world: World, x: Int, y: Int, z: Int): AnyRef = {
 
